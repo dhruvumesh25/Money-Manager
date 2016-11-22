@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/friendID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_size"/>
+
+    <TextView
+        android:id="@+id/friendDot"
+        android:layout_width="13dp"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_size"
+        android:text="." />
+
+    <TextView
+        android:id="@+id/friendName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.97"
+        android:padding="@dimen/activity_vertical_margin"
+        android:textSize="@dimen/text_size"
+        android:text="name" />
+
+    <TextView
+        android:id="@+id/friendRs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_size"
+        android:text="Rs." />
+
+    <TextView
+        android:id="@+id/friendAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/activity_vertical_margin"
+        android:textSize="@dimen/text_size"
+        android:text="amount" />
+
+</LinearLayout>
