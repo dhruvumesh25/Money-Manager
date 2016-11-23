@@ -17,32 +17,9 @@
         android:text="Save"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="172dp"
-        android:id="@+id/saveFriend" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
+        android:id="@+id/saveFriend"
         android:layout_below="@+id/name"
-        android:layout_alignRight="@+id/name"
-        android:layout_alignEnd="@+id/name"
-        android:layout_marginTop="36dp"
-        android:id="@+id/roll"
-        android:hint="Roll" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="31dp" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:layout_below="@+id/roll"
-        android:layout_alignRight="@+id/roll"
-        android:layout_alignEnd="@+id/roll"
-        android:layout_marginTop="34dp"
-        android:id="@+id/room"
-        android:hint="Room No" />
 </RelativeLayout>

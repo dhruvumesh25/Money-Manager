@@ -19,12 +19,8 @@ import com.dhruv.umesh.moneymanager.R;
 
 public class addfriend extends Fragment {
     private String fname;
-    private int froll;
-    private int froom;
     private Button save;
     private EditText text_name;
-    private EditText text_roll;
-    private EditText text_room;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -34,8 +30,6 @@ public class addfriend extends Fragment {
         save.setOnClickListener(new btnListener());
 
         text_name = (EditText) view.findViewById(R.id.name);
-        text_roll = (EditText) view.findViewById(R.id.roll);
-        text_room = (EditText) view.findViewById(R.id.room);
 
         return view;
     }
@@ -48,16 +42,6 @@ public class addfriend extends Fragment {
             }catch (NullPointerException e){
                 Toast.makeText(getActivity(),"NullPointerException", Toast.LENGTH_SHORT).show();
             }
-            try{
-                froll = Integer.valueOf(text_roll.getText().toString());
-            }catch (NumberFormatException e){
-                Toast.makeText(getActivity(),"Roll number must be Integer", Toast.LENGTH_SHORT).show();
-            }
-            try{
-                froom = Integer.valueOf(text_room.getText().toString());
-            }catch (NumberFormatException e){
-                Toast.makeText(getActivity(),"Room number must be Integer", Toast.LENGTH_SHORT).show();
-            }
 
             FriendDbHelper mDbHelper = new FriendDbHelper(getActivity());
 
@@ -66,8 +50,6 @@ public class addfriend extends Fragment {
             ContentValues values = new ContentValues();
             values.put(Friend.FriendEntry.FRIEND_NAME, fname);
             values.put(Friend.FriendEntry.FRIEND_AMOUNT, 0);
-//            values.put(Friend.FriendEntry.ROOM_NUMBER, froom);
-//            Toast.makeText(getActivity(),name+roll+room, Toast.LENGTH_SHORT).show();
 
             db.insert(Friend.FriendEntry.TABLE_NAME, null, values);
         }

@@ -9,6 +9,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.dhruv.umesh.moneymanager.R;
 
@@ -48,9 +50,9 @@ public class viewfriend extends ListFragment {
     }
 
     public void onListItemClick(ListView l, View view, int position, long id) {
-//        ViewGroup viewg=(ViewGroup)view;
-//        TextView tv=(TextView)viewg.findViewById(R.id.txtitem);
-//        Toast.makeText(getActivity(), tv.getText().toString(),Toast.LENGTH_LONG).show();
+        ViewGroup viewg=(ViewGroup)view;
+        TextView tv=(TextView)viewg.findViewById(R.id.friendName);
+        Toast.makeText(getActivity(), tv.getText().toString(),Toast.LENGTH_LONG).show();
 
     }
 

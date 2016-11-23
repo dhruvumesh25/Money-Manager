@@ -16,6 +16,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import FragmentClasses.addTransaction;
 import FragmentClasses.addfriend;
 import FragmentClasses.viewfriend;
 
@@ -87,7 +88,14 @@ public class LendActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.lend) {
-            // Handle the camera action
+            Fragment newFragment = new addTransaction();
+            FragmentTransaction transaction = getFragmentManager().beginTransaction();
+
+            transaction.replace(R.id.content_frame, newFragment);
+            transaction.addToBackStack(null);
+
+            transaction.commit();
+
         } else if (id == R.id.borrow) {
 
         } else if (id == R.id.addFriend){

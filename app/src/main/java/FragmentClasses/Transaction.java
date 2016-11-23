@@ -9,9 +9,11 @@ import android.provider.BaseColumns;
 public class Transaction {
     private Transaction(){}
 
-//    public static class TransactionEntry implements BaseColumns {
-//        public static final String TABLE_NAME = "transaction";
-//        public static final String FRIEND_ID = "friendId";
-//        public static final String FRIEND_AMOUNT = "amount";
-//    }
+    public static class TransactionEntry implements BaseColumns {
+        public static final String TABLE_NAME = "transaction";
+        public static final String FRIEND_ID = "friendId";
+        public static final String FRIEND_AMOUNT = "amount";
+        public static final String DATE_OF_TRANSACTION = "date";
+        public static final String DESCRIPTION = "description";
+    }
 }

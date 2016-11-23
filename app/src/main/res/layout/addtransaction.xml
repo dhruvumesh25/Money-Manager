@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:text="Friend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/friends"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:id="@+id/friendView"
+        android:textStyle="normal|bold"
+        android:textColor="@android:color/holo_red_dark" />
+
+    <Button
+        android:text="Save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="33dp"
+        android:id="@+id/saveButton"
+        android:layout_below="@+id/description"
+        android:layout_alignLeft="@+id/friendName"
+        android:layout_alignStart="@+id/friendName"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Widget.ActionMode.Title.Inverse"
+        android:textColor="?attr/colorControlActivated"
+        android:backgroundTint="@android:color/holo_orange_dark"
+        android:elevation="9dp"
+        android:visibility="visible" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/description"
+        android:hint="Description"
+        android:layout_alignTop="@+id/descriptionView"
+        android:layout_alignLeft="@+id/amount"
+        android:layout_alignStart="@+id/amount" />
+
+    <TextView
+        android:text="Lend Money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:id="@+id/friendName"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:fontFamily="cursive"
+        android:textColor="@color/colorAccent"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/friends"
+        android:layout_alignStart="@+id/friends" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="46dp"
+        android:id="@+id/friends"
+        android:popupBackground="@android:color/holo_purple"
+        android:layout_below="@+id/friendName"
+        android:layout_alignLeft="@+id/amount"
+        android:layout_alignStart="@+id/amount"
+        android:layout_alignRight="@+id/amount"
+        android:layout_alignEnd="@+id/amount"
+        android:background="@android:color/background_light" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/dateText"
+        android:layout_alignTop="@+id/dateButton"
+        android:layout_alignLeft="@+id/description"
+        android:layout_alignStart="@+id/description"
+        android:layout_toLeftOf="@+id/dateButton"
+        android:layout_toStartOf="@+id/dateButton"
+        android:hint="YYYY/MM/DD" />
+
+    <TextView
+        android:text="Description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/descriptionView"
+        android:textStyle="normal|bold"
+        android:textColor="@android:color/holo_red_dark"
+        android:layout_below="@+id/dateButton"
+        android:layout_alignLeft="@+id/dateView"
+        android:layout_alignStart="@+id/dateView"
+        android:layout_marginTop="13dp" />
+
+    <TextView
+        android:text="Date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:id="@+id/dateView"
+        android:textColor="@android:color/holo_red_dark"
+        android:textStyle="normal|bold"
+        android:layout_below="@+id/amount"
+        android:layout_alignLeft="@+id/amountView"
+        android:layout_alignStart="@+id/amountView" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_marginTop="8dp"
+        android:id="@+id/amount"
+        android:hint="Amount"
+        android:textColor="@android:color/holo_red_light"
+        android:layout_below="@+id/friends"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="23dp"
+        android:layout_marginEnd="23dp" />
+
+    <TextView
+        android:text="Amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/amountView"
+        android:textColor="@android:color/holo_red_dark"
+        android:textStyle="normal|bold"
+        android:layout_alignBaseline="@+id/amount"
+        android:layout_alignBottom="@+id/amount"
+        android:layout_alignLeft="@+id/friendView"
+        android:layout_alignStart="@+id/friendView" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/dateButton"
+        android:scaleX="0.8"
+        android:scaleY="1"
+        android:textAllCaps="false"
+        style="@style/Widget.AppCompat.Button"
+        android:background="@android:drawable/ic_menu_my_calendar"
+        android:layout_alignTop="@+id/dateView"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>
